@@ -6,8 +6,12 @@ import os
 
 from openai import OpenAI
 
+from dotenv import load_dotenv
+import os
 
-OPEN_AI_KEY = os.environ.get("OPENAI_API_KEY")
+load_dotenv()  # loads .env file from current directory
+
+OPEN_AI_KEY = os.getenv("OPENAI_API_KEY")
 
 client = OpenAI(api_key=OPEN_AI_KEY)
 
