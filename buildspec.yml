@@ -7,7 +7,7 @@ phases:
       nodejs: 18
     commands:
       - echo "Installing frontend..."
-      - cd frontend
+      - cd frontend-app
       - npm install
       - npm run build
       - cd ..
