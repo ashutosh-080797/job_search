@@ -1,0 +1,21 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.11
+      nodejs: 18
+    commands:
+      - echo "Installing frontend..."
+      - cd frontend
+      - npm install
+      - npm run build
+      - cd ..
+  build:
+    commands:
+      - echo "Build complete."
+
+artifacts:
+  files:
+    - '**/*'
+  base-directory: .
